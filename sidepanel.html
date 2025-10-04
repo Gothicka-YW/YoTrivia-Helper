@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8"/><title>YoTrivia</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="css/styles.css"/></head>
+<body>
+<header><strong>YoTrivia</strong><span class="badge" id="status">idle</span></header>
+<div class="container">
+  <div class="row" id="tabs">
+    <button data-tab="setup" class="primary">Setup</button>
+    <button data-tab="play">Play</button>
+    <button data-tab="packs">Packs</button>
+    <button data-tab="settings">Settings</button>
+  </div>
+
+  <section id="setup" class="view card">
+    <h3>Pre-game Setup</h3>
+    <div class="card">
+      <div class="row"><label>Category</label>
+        <select id="category"><option value="random">Random each question</option></select>
+        <label>Questions</label><input id="qPer" type="number" min="1" max="50" value="25"/>
+        <button id="start" class="primary">Start</button>
+      </div>
+    </div>
+    <div class="card">
+      <h4>YoWorld color wheel → category</h4>
+      <div class="colorgrid">
+        <button class="color y" data-k="y" title="Yellow"> </button>
+        <button class="color b" data-k="b" title="Blue"> </button>
+        <button class="color o" data-k="o" title="Orange"> </button>
+        <button class="color r" data-k="r" title="Red"> </button>
+        <button class="color p" data-k="p" title="Purple"> </button>
+        <button class="color g" data-k="g" title="Green"> </button>
+      </div>
+    </div>
+    <div class="card">
+      <h4>Roster</h4>
+      <div class="row"><input id="addPlayer" placeholder="Type a name and Enter"/><span class="badge" id="progress">0/0</span></div>
+      <div id="roster" class="list"></div>
+    </div>
+  </section>
+
+  <section id="play" class="view card" style="display:none">
+    <h3>Play</h3>
+    <div class="row">
+      <button id="next" class="primary">Next</button>
+      <button id="reveal">Reveal</button>
+      <button id="copyQ">Copy Q</button>
+      <button id="copyA">Copy A</button>
+    </div>
+    <div class="card">
+      <div>Category: <strong id="catNow">—</strong></div>
+      <h4 id="qText">No question loaded</h4>
+      <div id="aWrap" style="display:none">Answer: <span id="aText">—</span></div>
+    </div>
+    <div class="card">
+      <h4>Mark Correct</h4>
+      <div class="row"><input id="winner" placeholder="Player name"/><button id="award" class="primary">Award</button></div>
+    </div>
+  </section>
+
+  <section id="packs" class="view card" style="display:none">
+    <h3>Question Packs</h3>
+    <p>Skeleton only — import/export UI goes here. No questions bundled.</p>
+  </section>
+
+  <section id="settings" class="view card" style="display:none">
+    <h3>Settings</h3>
+    <div class="card">
+      <div class="row">Yellow → <select id="mapYellow"></select></div>
+      <div class="row">Blue → <select id="mapBlue"></select></div>
+      <div class="row">Orange → <select id="mapOrange"></select></div>
+      <div class="row">Red → <select id="mapRed"></select></div>
+      <div class="row">Purple → <select id="mapPurple"></select></div>
+      <div class="row">Green → <select id="mapGreen"></select></div>
+      <div class="row"><button id="save" class="primary">Save</button><span id="saved" class="badge"></span></div>
+    </div>
+  </section>
+</div>
+<script type="module" src="js/sidepanel.js"></script></body></html>

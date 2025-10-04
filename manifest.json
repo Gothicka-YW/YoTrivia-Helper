@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YoTrivia - Host Toolkit (Skeleton)",
+  "version": "0.1.0",
+  "description": "Skeleton side-panel host for YoWorld trivia. No questions bundled.",
+  "permissions": [
+    "storage",
+    "sidePanel"
+  ],
+  "action": {
+    "default_title": "YoTrivia"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}

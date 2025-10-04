@@ -1,0 +1,14 @@
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0f1020;color:#e7ecf3}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px;border-bottom:1px solid #2a2d4e}
+.container{padding:10px}
+.card{background:#16182a;border:1px solid #2a2d4e;border-radius:10px;padding:10px;margin:10px 0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button{background:#2a2d4e;color:#e7ecf3;border:0;border-radius:8px;padding:8px 10px;cursor:pointer}
+button.primary{background:#7c9cff;color:#0b1020}
+.badge{padding:2px 8px;border-radius:999px;background:#111225;border:1px solid #2a2d4e;color:#aab1c0;font-size:12px}
+input,select{background:#0f1122;color:#e7ecf3;border:1px solid #2a2d4e;border-radius:8px;padding:8px}
+.list{max-height:180px;overflow:auto;border:1px solid #2a2d4e;border-radius:8px}
+.list-item{display:flex;justify-content:space-between;padding:6px 8px;border-bottom:1px solid #222447}
+.colorgrid{display:grid;grid-template-columns:repeat(6,40px);gap:8px}
+.color{width:40px;height:40px;border-radius:8px;border:2px solid #2a2d4e}
+.y{background:#ffd60a}.b{background:#3a86ff}.o{background:#ff8c42}.r{background:#ff4d6d}.p{background:#9b5de5}.g{background:#2ecc71}
